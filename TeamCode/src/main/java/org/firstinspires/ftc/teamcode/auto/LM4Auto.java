@@ -21,7 +21,7 @@ import java.util.List;
 public class LM4Auto extends LinearOpMode {
     // Time to wait before starting the autonomous
     private static final double AUTO_START_DELAY = 0; // Milliseconds
-
+// hello
     // 9 artifact auto + move to gate zone
     final List<State> stateList = new ArrayList<>(Arrays.asList(
             State.MOVE_TO_SCORING_POSITION, // Move from starting position to scoring position
