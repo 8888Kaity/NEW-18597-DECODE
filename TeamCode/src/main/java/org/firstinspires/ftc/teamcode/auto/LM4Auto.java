@@ -208,8 +208,7 @@ public class LM4Auto extends LinearOpMode {
                         lastCommandedPose = robot.poses.score;
                         nextState();
                         break;
-                    case
-                            MOVE_TO_PPG:
+                    case MOVE_TO_PPG:
                         robot.drivetrain.followPath(Poses.buildPath(robot.drivetrain, robot.poses.PPGArtifacts));
                         lastCommandedPose = robot.poses.PPGArtifacts;
                         nextState();
