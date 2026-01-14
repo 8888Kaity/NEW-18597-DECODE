@@ -84,15 +84,13 @@ public class LM4TeleOpBackup extends LinearOpMode {
             if (gamepad1.leftBumperWasPressed()) {
                 slowMode = !slowMode;
             }
-
-            // Set movement vectors based on gamepad inputs
-            // Set movement vectors based on gamepad inputs
-            robot.drivetrain.setMovementVectors(new MovementVectors(
-                    -gamepad1.left_stick_y,
-                    -gamepad1.left_stick_x,
-                    -gamepad1.right_stick_x
-            ), reallySlowMode ? REALLY_SLOW_SPEED_MULTIPLIER : (slowMode ? SLOW_SPEED_MULTIPLIER : NORMAL_SPEED_MULTIPLIER));
-
+                // Set movement vectors based on gamepad inputs
+                // Set movement vectors based on gamepad inputs
+                robot.drivetrain.setMovementVectors(new MovementVectors(
+                        -gamepad1.left_stick_y,
+                        -gamepad1.left_stick_x,
+                        -gamepad1.right_stick_x
+                ), reallySlowMode ? REALLY_SLOW_SPEED_MULTIPLIER : (slowMode ? SLOW_SPEED_MULTIPLIER : NORMAL_SPEED_MULTIPLIER));
             // Gamepad 2 Left Bumper: Toggle intake
             if (gamepad2.leftBumperWasPressed()) {
                 if (robot.intake.isActive()) {
@@ -152,6 +150,8 @@ public class LM4TeleOpBackup extends LinearOpMode {
             telemetry.addData("X: ", currentPose.getX());
             telemetry.addData("Y: ", currentPose.getY());
             telemetry.addData("Heading: ", Math.toDegrees(currentPose.getHeading()));
+            telemetry.addData("Stick Power ", gamepad1.left_stick_x);
+            telemetry.addData("Stick Power ", gamepad1.left_stick_y);
             telemetry.update();
         }
 
