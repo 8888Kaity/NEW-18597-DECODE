@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@Autonomous(name = "LM4 Auto", group = "Autonomous")
+@Autonomous(name = "LM4 Autosss", group = "Autonomous")
 @SuppressWarnings("FieldCanBeLocal") // Suppress pointless Android Studio warnings
 public class LM4Auto extends LinearOpMode {
     // Time to wait before starting the autonomous
@@ -204,7 +204,8 @@ public class LM4Auto extends LinearOpMode {
                         }
                         break;
                     case MOVE_TO_SCORING_POSITION:
-                        robot.drivetrain.followPath(Poses.buildPath(robot.drivetrain, robot.poses.score), 0.8);
+                        robot.drivetrain.followPath(Poses.buildPath(robot.drivetrain, robot.poses.score), 0.8
+                        );
                         lastCommandedPose = robot.poses.score;
                         nextState();
                         break;
