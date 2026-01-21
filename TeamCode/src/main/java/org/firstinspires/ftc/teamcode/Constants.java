@@ -94,9 +94,9 @@ public class Constants {
         public static PIDFCoefficients rightLauncherCoefficients = new PIDFCoefficients(10, 0, 0.1, 12.215);
         public static PVSCoefficients leftLauncherPVSCoefficients = new PVSCoefficients(0.005, 0.00042, 0.002);
         public static PVSCoefficients rightLauncherPVSCoefficients = new PVSCoefficients(0.005, 0.00042, 0.002);
-        public static int TARGET_RPM = 700; // Target RPM for both launcher motors
-        public static int RPM_TOLERANCE = 40; // Launch RPM tolerance (must be within the range of target RPM +- tolerance)
-        public static int RPM_IN_RANGE_TIME = 500; // Time that the RPM must be within the tolerance before launching (milliseconds)
+        public static int TARGET_RPM = 840; // Target RPM for both launcher motors
+        public static int RPM_TOLERANCE = 20; // Launch RPM tolerance (must be within the range of target RPM +- tolerance)
+        public static int RPM_IN_RANGE_TIME = 400; // Time that the RPM must be within the tolerance before launching (milliseconds)
         public enum LauncherState {
             IDLE,
             SPEED_UP,
@@ -189,13 +189,13 @@ public class Constants {
             this.goalStart = buildPose(15.25, 111, 144, mirrorPoses);
             this.audienceStart = mirrorPoses ? buildPose(50, BACK_TO_CENTER_DIST + 8, 90, true) : buildPose(56, BACK_TO_CENTER_DIST, 90, false);;
             this.localize = buildPose(144 - LEFT_SIDE_TO_CENTER_DIST, BACK_TO_CENTER_DIST, 0, mirrorPoses);
-            this.score = mirrorPoses ? buildPose(46,  111, 135, true) : buildPose(46,  111, 135, false);
+            this.score = mirrorPoses ? buildPose(45.8,  111, 137, true) : buildPose(46,  111, 137, false);
             this.gateZoneNotPushed = buildPose(25, 67, 90, mirrorPoses);
             this.PPGArtifacts = buildPose(60, 51, 194, mirrorPoses);
-            this.PGPArtifacts = buildPose(60,  80, 200, mirrorPoses);
+            this.PGPArtifacts = buildPose(60,  71, 170, mirrorPoses);
             this.GPPArtifacts = buildPose(60, 97, 180, mirrorPoses);
             this.PPGArtifactsEnd = buildPose(25, 51, 194, mirrorPoses);
-            this.PGPArtifactsEnd = buildPose(25, 80, 200, mirrorPoses);
+            this.PGPArtifactsEnd = buildPose(25, 71, 170, mirrorPoses);
             this.GPPArtifactsEnd = buildPose(22, 97, 180, mirrorPoses);
             this.moveOffLineAudience = buildPose(40, BACK_TO_CENTER_DIST + 4, 90, mirrorPoses);
             this.moveOffLineGoal = buildPose(56, 134, 90, mirrorPoses);
