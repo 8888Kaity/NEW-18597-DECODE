@@ -52,7 +52,7 @@ public class Constants {
 
     // Speed for Pedro to slow down to when approaching a pose
     public static double PATH_SLOW_DOWN_T_VALUE = 0.9; // T value to start slowing down at (0-1)
-    public static double PATH_SLOW_DOWN_SPEED = 0.3; // Speed to slow down to when approaching a pose (0-1)
+    public static double PATH_SLOW_DOWN_SPEED = 0.5; // Speed to slow down to when approaching a pose (0-1)
 
     // Constants for slowing down when approaching a wall
     public static double WALL_SLOW_DOWN_DISTANCE = BACK_TO_CENTER_DIST + 12; // Distance to start slowing down at (inches)
@@ -78,8 +78,8 @@ public class Constants {
     }
 
     public static class TapperConstants {
-        public static double POSITIONING_TIME = 350; // Time it takes for the tapper to move between positions (milliseconds)
-        public static double PUSHED_POSITION = 0.65; // Position that the tapper goes to when pushing an artifact into the launcher
+        public static double POSITIONING_TIME = 200; // Time it takes for the tapper to move between positions (milliseconds)
+        public static double PUSHED_POSITION = 0.90 ; // Position that the tapper goes to when pushing an artifact into the launcher
         public static double HOME_POSITION = 0.1; // Position of the tapper when retracted
         public enum TapperState {
             IDLE_COMMANDED,
@@ -94,9 +94,9 @@ public class Constants {
         public static PIDFCoefficients rightLauncherCoefficients = new PIDFCoefficients(10, 0, 0.1, 12.215);
         public static PVSCoefficients leftLauncherPVSCoefficients = new PVSCoefficients(0.005, 0.00042, 0.002);
         public static PVSCoefficients rightLauncherPVSCoefficients = new PVSCoefficients(0.005, 0.00042, 0.002);
-        public static int TARGET_RPM = 840; // Target RPM for both launcher motors
+        public static int TARGET_RPM = 620; // Target RPM for both launcher motors
         public static int RPM_TOLERANCE = 20; // Launch RPM tolerance (must be within the range of target RPM +- tolerance)
-        public static int RPM_IN_RANGE_TIME = 400; // Time that the RPM must be within the tolerance before launching (milliseconds)
+        public static int RPM_IN_RANGE_TIME = 150; // Time that the RPM must be within the tolerance before launching (milliseconds)
         public enum LauncherState {
             IDLE,
             SPEED_UP,
@@ -105,8 +105,8 @@ public class Constants {
     }
 
     public static class IntakeConstants {
-        public static double INTAKE_POWER = 1.0; // Power for intake motor
-        public static double RAMP_HOLD_POSITION = 1.0; // Position for the intake ramp that holds artifacts in the storage area
+        public static double INTAKE_POWER = 0.9; // Power for intake motor
+        public static double RAMP_HOLD_POSITION = 0.65; // Position for the intake ramp that holds artifacts in the storage area
         public static double RAMP_INTAKE_POSITION = 0.0; // Position for the intake ramp that allows the intake to put artifacts in the storage area
         public static double RAMP_POSITIONING_TIME = 500; // Time it takes for the ramp to move between positions (milliseconds)
         public enum IntakeState {
@@ -189,13 +189,13 @@ public class Constants {
             this.goalStart = buildPose(15.25, 111, 144, mirrorPoses);
             this.audienceStart = mirrorPoses ? buildPose(50, BACK_TO_CENTER_DIST + 8, 90, true) : buildPose(56, BACK_TO_CENTER_DIST, 90, false);;
             this.localize = buildPose(144 - LEFT_SIDE_TO_CENTER_DIST, BACK_TO_CENTER_DIST, 0, mirrorPoses);
-            this.score = mirrorPoses ? buildPose(45.8,  111, 137, true) : buildPose(46,  111, 137, false);
+            this.score = mirrorPoses ? buildPose(45.8,  111, 137, true) : buildPose(46.3,  111, 137, false);
             this.gateZoneNotPushed = buildPose(25, 67, 90, mirrorPoses);
             this.PPGArtifacts = buildPose(60, 51, 194, mirrorPoses);
             this.PGPArtifacts = buildPose(60,  71, 170, mirrorPoses);
             this.GPPArtifacts = buildPose(60, 97, 180, mirrorPoses);
-            this.PPGArtifactsEnd = buildPose(25, 51, 194, mirrorPoses);
-            this.PGPArtifactsEnd = buildPose(25, 71, 170, mirrorPoses);
+            this.PPGArtifactsEnd = buildPose(35, 51, 194, mirrorPoses);
+            this.PGPArtifactsEnd = buildPose(35, 71, 170, mirrorPoses);
             this.GPPArtifactsEnd = buildPose(22, 97, 180, mirrorPoses);
             this.moveOffLineAudience = buildPose(40, BACK_TO_CENTER_DIST + 4, 90, mirrorPoses);
             this.moveOffLineGoal = buildPose(56, 134, 90, mirrorPoses);
