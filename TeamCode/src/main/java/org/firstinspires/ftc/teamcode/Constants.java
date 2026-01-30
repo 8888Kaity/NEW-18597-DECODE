@@ -189,13 +189,13 @@ public class Constants {
             this.goalStart = buildPose(15.25, 111, 144, mirrorPoses);
             this.audienceStart = mirrorPoses ? buildPose(50, BACK_TO_CENTER_DIST + 8, 90, true) : buildPose(56, BACK_TO_CENTER_DIST, 90, false);;
             this.localize = buildPose(144 - LEFT_SIDE_TO_CENTER_DIST, BACK_TO_CENTER_DIST, 0, mirrorPoses);
-            this.score = mirrorPoses ? buildPose(45.8,  111, 137, true) : buildPose(46.3,  111, 137, false);
+            this.score = mirrorPoses ? buildPose(47.8,  111, 137, true) : buildPose(46.3,  111, 137, false);
             this.gateZoneNotPushed = buildPose(25, 67, 90, mirrorPoses);
             this.PPGArtifacts = buildPose(60, 51, 194, mirrorPoses);
             this.PGPArtifacts = buildPose(60,  71, 170, mirrorPoses);
             this.GPPArtifacts = buildPose(60, 97, 180, mirrorPoses);
             this.PPGArtifactsEnd = buildPose(35, 51, 194, mirrorPoses);
-            this.PGPArtifactsEnd = buildPose(35, 71, 170, mirrorPoses);
+            this.PGPArtifactsEnd = buildPose(33, 71, 170, mirrorPoses);
             this.GPPArtifactsEnd = buildPose(22, 97, 180, mirrorPoses);
             this.moveOffLineAudience = buildPose(40, BACK_TO_CENTER_DIST + 4, 90, mirrorPoses);
             this.moveOffLineGoal = buildPose(56, 134, 90, mirrorPoses);
